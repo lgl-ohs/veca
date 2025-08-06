@@ -1,6 +1,13 @@
-import * as React from 'react';
-import { DashboardLayout } from '@toolpad/core/DashboardLayout';
+import { NextAppProvider } from '@toolpad/core/nextjs';
 
-export default async function DashboardPagesLayout(props: { children: React.ReactNode }) {
-  return <DashboardLayout>{props.children}</DashboardLayout>;
+export default function DashboardLayout(
+  {children}: {children: React.ReactNode}
+) {
+  return (
+    <>
+        {/* Layout UI */}
+        {/* Place children where you want to render a page or nested layout */}
+        <main>{children}</main>
+    </>
+  )
 }
