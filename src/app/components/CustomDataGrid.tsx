@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { DataGrid, DataGridProps } from '@mui/x-data-grid';
 
 export default function CustomDataGrid(props: DataGridProps) {
