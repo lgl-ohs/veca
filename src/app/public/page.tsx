@@ -1,10 +1,33 @@
-import Typography from '@mui/material/Typography';
+"use client"
 
-export default async function HomePage() {
+import { redirect, RedirectType } from 'next/navigation'
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
+
+export default function HomePage() {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
+  function handleClick() {
+    redirect('/', RedirectType.replace);
+  }
+
   return (
     <>
-      <Typography>WISDOM for Whole Life Energy and Carbon Management</Typography>
-      <Typography>Sign In</Typography>
+        <Typography>WISDOM for Whole Life Energy and Carbon Management</Typography>
+        <Button
+          variant="contained"
+          size="small"
+          color="primary"
+          endIcon={<ChevronRightRoundedIcon />}
+          fullWidth={isSmallScreen}
+          onClick={handleClick}
+        >
+          Sign In
+        </Button>
     </>
   )
 }
