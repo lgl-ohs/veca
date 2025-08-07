@@ -197,7 +197,9 @@ export const employeesDataSource: DataSource<Employee> = {
     setEmployeesStore(employeesStore.filter((employee) => employee.id !== Number(employeeId)));
   },
   validate: z.object({
-    name: z.string({ required_error: 'Name is required' }).nonempty('Name is required'),
+    //name: z.string({ required_error: 'Name is required' }).nonempty('Name is required'),
+    name: z.string().min(1, { message: "Name is required" })
+
     age: z.number({ required_error: 'Age is required' }).min(18, 'Age must be at least 18'),
     joinDate: z
       .string({ required_error: 'Join date is required' })
