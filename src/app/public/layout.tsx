@@ -1,13 +1,10 @@
-import { NextAppProvider } from '@toolpad/core/nextjs';
+import { ReactNode } from 'react';
 
-export default function DashboardLayout(
-  {children}: {children: React.ReactNode}
-) {
+export default function PublicLayout(props: {children: ReactNode}) {
+
   return (
-    <>
-        {/* Layout UI */}
-        {/* Place children where you want to render a page or nested layout */}
-        <main>{children}</main>
-    </>
+    <main>
+      {props.children}
+    </main>
   )
 }

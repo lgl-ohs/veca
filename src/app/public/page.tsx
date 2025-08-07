@@ -7,12 +7,12 @@ import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 
-export default function HomePage() {
+export default function PublicPage() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   function handleClick() {
-    redirect('/', RedirectType.replace);
+    redirect('/auth/signin', RedirectType.replace);
   }
 
   return (

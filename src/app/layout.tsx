@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { ReactNode } from 'react';
 import { SessionProvider, signIn, signOut } from 'next-auth/react';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import DashboardIcon from '@mui/icons-material/Dashboard';
@@ -40,7 +40,7 @@ const AUTHENTICATION = {
   signOut,
 };
 
-export default async function RootLayout(props: { children: React.ReactNode }) {
+export default async function RootLayout(props: { children: ReactNode }) {
   const session = await auth();
 
   return (
