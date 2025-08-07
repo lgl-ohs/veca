@@ -12,7 +12,8 @@ export default function SignIn() {
         try {
           return await signIn(provider.id, {
             ...(formData && { email: formData.get('email'), password: formData.get('password') }),
-            redirectTo: callbackUrl ?? '/',
+            //redirectTo: callbackUrl ?? '/',
+            redirectTo: ((callbackUrl ?? '/') + 'dashboard'),
           });
         } catch (error) {
           // The desired flow for successful sign in in all cases
