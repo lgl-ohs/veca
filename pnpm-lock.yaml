@@ -32,6 +32,9 @@ importers:
       '@toolpad/core':
         specifier: ^0.14.0
         version: 0.14.0(5c44ac9ffb65e4d809ef0f5572547841)
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       next:
         specifier: ^15
         version: 15.4.5(@babel/core@7.28.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
