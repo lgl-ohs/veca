@@ -47,25 +47,21 @@ export default async function RootLayout(props: { children: ReactNode }) {
   const session = await auth();
 
   return (
-    <html lang="en" data-toolpad-color-scheme="light">
-      <body>
-        <SessionProvider session={session}>
-          <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-            <NextAppProvider
-              navigation={NAVIGATION}
-              branding={BRANDING}
-              session={session}
-              authentication={AUTHENTICATION}
-            >
-              <DashboardLayout>
-                <PageContainer>
-                  {props.children}
-                </PageContainer>
-              </DashboardLayout>
-            </NextAppProvider>
-          </AppRouterCacheProvider>
-        </SessionProvider>
-      </body>
-    </html>
+    <SessionProvider session={session}>
+      <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+        <NextAppProvider
+          navigation={NAVIGATION}
+          branding={BRANDING}
+          session={session}
+          authentication={AUTHENTICATION}
+        >
+          <DashboardLayout>
+            <PageContainer>
+              {props.children}
+            </PageContainer>
+          </DashboardLayout>
+        </NextAppProvider>
+      </AppRouterCacheProvider>
+    </SessionProvider>
   );
 }
