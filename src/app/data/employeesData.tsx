@@ -199,7 +199,8 @@ export const employeesDataSource: DataSource<Employee> = {
   validate: z.object({
     //name: z.string({ required_error: 'Name is required' }).nonempty('Name is required'),
     name: z.string().min(1, { message: "Name is required" }),
-    age: z.number({ required_error: 'Age is required' }).min(18, 'Age must be at least 18'),
+    //age: z.number({ required_error: 'Age is required' }).min(18, 'Age must be at least 18'),
+    age: z.number().min(18, 'Age must be at least 18'),
     //joinDate: z
     //  .string({ required_error: 'Join date is required' })
     //  .nonempty('Join date is required'),
