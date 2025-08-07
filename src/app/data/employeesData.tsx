@@ -205,9 +205,10 @@ export const employeesDataSource: DataSource<Employee> = {
     //  .string({ required_error: 'Join date is required' })
     //  .nonempty('Join date is required'),
     joinDate: z.string().min(1, { message: "Join date is required" }),
-    role: z.enum(['Market', 'Finance', 'Development'], {
-      errorMap: () => ({ message: 'Role must be "Market", "Finance" or "Development"' }),
-    }),
+    //role: z.enum(['Market', 'Finance', 'Development'], {
+    //  errorMap: () => ({ message: 'Role must be "Market", "Finance" or "Development"' }),
+    //}),
+    role: z.string().min(1, { message: "Role is required" }),
   })['~standard'].validate,
 };
 
