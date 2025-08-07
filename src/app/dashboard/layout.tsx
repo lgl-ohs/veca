@@ -57,11 +57,11 @@ export default async function RootLayout(props: { children: ReactNode }) {
               session={session}
               authentication={AUTHENTICATION}
             >
-    <DashboardLayout>
-      <PageContainer>
-              {props.children}
-      </PageContainer>
-    </DashboardLayout>
+              <DashboardLayout>
+                <PageContainer>
+                  {props.children}
+                </PageContainer>
+              </DashboardLayout>
             </NextAppProvider>
           </AppRouterCacheProvider>
         </SessionProvider>

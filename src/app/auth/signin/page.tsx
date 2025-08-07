@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { AuthError } from 'next-auth';
+import Typography from '@mui/material/Typography';
 import { SignInPage, type AuthProvider } from '@toolpad/core/SignInPage';
 
 import { providerMap, signIn } from '../../../auth';
@@ -8,9 +9,12 @@ export default function SignIn() {
 
   return (
     <>
-    <p/>
-      
-    <center><b><Link href="/">Home</Link></b></center>
+    <center>
+      <p/>
+      <Typography>WISDOM for Whole Life Energy and Carbon Management</Typography>
+      <p/>
+      <b><Link href="/">Home</Link></b>
+    </center>
 
     <SignInPage
       providers={providerMap}
