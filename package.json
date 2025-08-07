@@ -12,6 +12,7 @@
     "@mui/material": "^7",
     "@mui/material-nextjs": "^7",
     "@mui/x-charts": "^8.9.2",
+    "@mui/x-data-grid": "^8.9.2",
     "@mui/x-tree-view": "^8.9.2",
     "@toolpad/core": "^0.14.0",
     "clsx": "^2.1.1",
